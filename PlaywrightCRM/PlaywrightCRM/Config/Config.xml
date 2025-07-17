@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<config>
+	<!-- Setup environment for running test-->
+	<numberOfRuns>1</numberOfRuns>
+	<environment>QA</environment>
+	<browser>chrome</browser>
+	<!--projects: DKHN; BVTN; Horus-->
+	<project_name>dkhn</project_name>
+	<site_name>qa</site_name>
+
+	<!-- BVDKHN -->
+	<dkhn>
+		<!--DEV DKHN-->
+		<dev
+			url="">
+			<instanceName>-dev-</instanceName>
+			<tokens bearerToken=""/>
+			<webApis Api=""/>
+		</dev>
+
+		<!--QA DKHN-->
+		<qa
+			url="">
+			<instanceName>-qa-</instanceName>
+			<tokens bearerToken=""/>
+			<webApis Api=""/>
+		</qa>
+
+		<!--Staging DKHN-->
+		<staging
+			url="">
+			<instanceName>-staging-</instanceName>
+			<tokens bearerToken=""/>
+			<webApis Api=""/>
+		</staging>
+	</dkhn>
+
+	<!--BV Thien Nhan-->
+	<bvtn>
+		<qa
+			url="">
+			<instanceName>-qa-</instanceName>
+			<tokens bearerToken=""/>
+			<webApis Api=""/>
+		</qa>
+		<staging
+			url="">
+			<instanceName>--staging-</instanceName>
+			<tokens bearerToken=""/>
+			<webApis Api=""/>
+		</staging>
+	</bvtn>
+
+	<!--Horus-->
+	<horus>
+		<qa
+			url="">
+			<instanceName>-qa-</instanceName>
+			<tokens bearerToken=""/>
+			<webApis Api=""/>
+		</qa>
+	</horus>
+
+	<account>
+		<valid username="" password="" fullname=""/>
+		<invalid username="abc@123.456" password="abc"/>
+		<email mail="" password="" recoveryemailaddr="" phone="" mailuserrole="" passuserrole="" />
+		<facebook site="" emailorphone="" password="" username="" />
+		<zalo site="" username="" />
+		<!--(DKHN)-->
+		<ivf>
+			<admin username="" password="" fullname=""/>
+			<trucchat usernamelead="" emaillead="" passwordlead="" team=""
+					  username="" email="" password=""/>
+			<telesale usernamelead="" emaillead="" passwordlead="" team=""
+					  username="" email="" password=""/>
+			<tuvan usernamelead="" emaillead="" passwordlead="" team=""
+				   username="" email="" password=""/>
+			<cskh usernamelead="" emaillead="" passwordlead="" team=""
+				  username="" email="" password=""/>
+		</ivf>
+		<dakhoa>
+			<admin username="" password="" fullname=""/>
+			<trucchat username="" password=""/>
+			<telesale username="" password=""/>
+			<tuvan username="" password=""/>
+			<cskh username="" password=""/>
+		</dakhoa>
+		<yhtt username="" password=""/>
+		<doitac username="" password=""/>
+		<khachdoan username="" password=""/>
+	</account>
+
+	<!--Firefox directory for 32 bit or 64 bit. (Currently, Using gecko 64 bit)-->
+	<gecko path="Core\WebDrivers" />
+
+	<!-- Database information for test report-->
+	<!--<database>
+		<connection>Server=.;Initial Catalog=...;Integrated Security=true;Trusted_Connection=Yes;</connection>
+		<functionality>SELECT * FROM ...</functionality>
+		<performance>SELECT * FROM ...</performance>
+	</database>-->
+
+	<!-- Screenshot directory and format setting -->
+	<screenshot>
+		<!--<screenshotPath>D://.../.../.../</screenshotPath>-->
+		<screenshotPath>TestResults</screenshotPath>
+		<screenshotFormat>.jpeg</screenshotFormat>
+	</screenshot>
+
+	<!-- Record video directory and format setting -->
+	<recordvideo>
+		<!--<recordvideoPath>D://.../.../.../</recordvideoPath>-->
+		<recordvideoPath>TestResults</recordvideoPath>
+		<recordvideoFormat>.webm</recordvideoFormat>
+	</recordvideo>
+
+</config>
